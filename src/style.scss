@@ -1,0 +1,351 @@
+$myred: #cf2626;
+$mydark: #222258;
+$mylight: #eaeaff;
+$myorange: #f74000;
+
+@mixin mobile{
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+
+#body{
+    margin: 0;
+}
+.regBox{
+    align-items: center;
+    background-color : $mylight;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+
+.regtxt{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 60px;
+    align-items: center;
+
+    .logo{
+        width: 240px;
+        // position: absolute;
+    }
+    .title{
+        font-weight: bold;
+        font-size: 18px;
+        color: $myorange;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input{
+            border:none;
+            padding: 15px;
+            border-bottom:1px solid $mylight;
+
+            &::placeholder{
+                color: grey;
+            }
+        }
+        label{
+            cursor:pointer;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            gap :10px;
+            font-size: 14px;
+            img{
+                height: inherit;
+            }
+        }
+        button{
+            background-color: $myorange;
+            color: white;
+            padding: 10px;
+            cursor:pointer;
+            border:none;
+            border-radius: 5px;
+            font-weight: bold;;
+        }
+    }
+    p{
+        color: $mydark;
+        font-size: 14px;
+        margin-top: 10px;
+
+        .reglog{
+            color: $myorange;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
+
+    }
+}
+
+.home{
+    background-color: $mylight;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container{
+        // border: 1px solid $mydark;
+        border-radius: 10px;
+        width: 70%;
+        height: 80%;
+        display: flex;
+        overflow: hidden;
+        background-color: $mylight;
+
+        .chat{
+            flex:2;
+            
+            .chatInfo{
+                height: 60px;
+                background-color: $myorange;
+                display: flex;
+                align-items: center;
+                justify-content:space-between ;
+                padding: 10px;
+                color: mydark;
+                font-size: 20px;
+            }
+
+            .chaticons{
+                display:flex;
+                gap: 10px;
+
+                img{
+                    height:24px;
+                    cursor:pointer;
+                }
+            }
+            .messages{
+                background-color: $mylight;
+                padding: 10px;
+                height: calc(100% - 160px);
+                overflow: scroll;
+                
+
+                .message{
+                    display: flex;
+                    gap :20px;
+                    margin-bottom: 20px;
+
+                    .msginfo{
+                        display: flex;
+                        flex-direction: column;
+                        color:gray;
+                        font-weight: 300;
+
+
+                        img{
+                          width: 40px;
+                          height: 40px; 
+                          object-fit: cover; 
+                          border-radius: 50%;
+                        }
+                    }
+                    .msgcontent{
+                        max-width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        p{
+                            background-color: white;
+                            padding: 10px 20px;
+                            border-radius: 0px 15px 15px 15px;
+                        }
+                        img{
+                            width: 40%;
+                        }
+                    }
+
+                    &.owner{
+                        flex-direction: row-reverse;
+                        .msgcontent{
+                            align-items: flex-end;
+
+                            p{
+                                background-color: azure;
+                                color: $myorange;
+                                border-radius: 15px 0px 15px 15px;
+                                max-width: max-content;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            .input{
+                height: 50px;
+                background-color: white;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                input{
+                    width: 100%;
+                    border:none;
+                    outline :none;
+                    color: $mydark;
+                    font-size: 18px;
+
+                    &::placeholder{
+                        color: lightgrey;
+                    }
+                }
+
+                .send{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    img{
+                        height: 24px;
+                        cursor:pointer;
+                    }
+
+                    button{
+                        border:none;
+                        padding: 10px 20px;
+                        color: white;
+                        background-color: $myorange; 
+                        border-radius: 7px;  
+                    }
+                }
+            }
+        }
+        .sidebar{
+            flex:1;
+            background-color: $mydark;
+            border-right: 1px solid $mylight;
+            // border-radius: inherit;
+
+            .userChat{
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                gap:10px;
+                color: white;
+                cursor: pointer;
+
+                &:hover{
+                    background-color:$myorange;
+                }
+                img{
+                    height: 50px;
+                    width: 50px;
+                    border-radius:50%;
+                    object-fit: cover;
+                }
+
+                .userChatInfo{
+                    span{font-size: 18px;
+                        font-weight: 500;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            
+            }
+            .search{
+                border-bottom: 0px solid grey;
+
+                .searchform{
+                    padding: 10px;
+                    input{
+                        background-color: transparent;
+                        border: none;
+                        color: wheat;
+                        outline: none;
+                        
+                        &::placeholder{
+                            color: grey;
+                        }
+                    }
+                }
+                
+                
+            }
+            .navbar{
+                display: flex;
+                align-items: center;
+                background-color: $mylight;
+                border:1px solid $mydark;
+                // border-left: 1px solid $mydark;
+                border-radius: 9.7px 0px 0px 0px;
+                height: 60px;
+                padding: 10px;
+                justify-content: space-between;
+                color: wheat;
+                // border: solid 11px $mydark;
+                // border-style: double;
+                // border-radius: inherit;
+
+                .navlogo{
+                    height: inherit;
+                    padding-bottom: 5px;
+                    margin: none;
+
+                    @include mobile{
+                        display : none;
+                }
+                }
+                
+                .user{
+                    display : flex;
+                    gap: 10px;
+
+                    img{
+                        background-color: white;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+
+                    }
+                    button{
+                        background-color: $myorange;
+                        font-size: 12px;
+                        width: 60px;
+                        height: 30px;
+                        border:none;
+                        cursor: pointer;
+                        border-radius: 8px;
+                        margin: auto;
+                        color: white;
+                        font-weight: bold;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
