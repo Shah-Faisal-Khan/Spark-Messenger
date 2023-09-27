@@ -42,6 +42,19 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Designing
+Scss can be used in any project like this one by install it usin the following command:
+## 'npm install sass'
+The changes and effect of .scss file can only be seen after this command.
+
+## Firebase Backend
+To use firebase backend, create an account on Firebase and create a new project.
+After that install firebase by using the following command:
+## 'npm install firebase'
+After installation firebase can be initialized using the firebase.js file as shown in this projects files.
+
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
