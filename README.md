@@ -1,3 +1,8 @@
+## Shah Faisal Khan Pathan
+IIT Gandhinagar
+B.Tech in Computer Science and Engineering
+
+
 # Getting Startet With The Spark Messenger Application
 
 This project was created using React and can be run using npm as shown below.
@@ -44,13 +49,13 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Designing
 Scss can be used in any project like this one by install it usin the following command:
-## 'npm install sass'
+### 'npm install sass'
 The changes and effect of .scss file can only be seen after this command.
 
 ## Firebase Backend
 To use firebase backend, create an account on Firebase and create a new project.
 After that install firebase by using the following command:
-## 'npm install firebase'
+### 'npm install firebase'
 After installation firebase can be initialized using the firebase.js file as shown in this projects files.
 
 
