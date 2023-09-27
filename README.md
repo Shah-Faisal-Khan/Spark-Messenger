@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Getting Startet With The Spark Messenger Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created using React and can be run using npm as shown below.
+The Backend was implemented using Google's FireBase. 
+The features from Firebase used are Authentication, Storage and Firebase database.
+The designing of the pages is done using scss.
 
 ## Available Scripts
 
